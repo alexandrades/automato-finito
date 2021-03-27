@@ -2,13 +2,14 @@
 #include<stdlib.h>
 #include<string.h>
 
+// Tipo abstrato transition
 typedef struct Transition{
     char symbol;
     int destiny;
     struct Transition* next;
 }transition;
 
-
+// Tipo abstrato state
 typedef struct State{
     int index;
     transition *transitions;
