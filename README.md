@@ -1,6 +1,6 @@
 # automato-finito
 Programa para reconhecimento de linguagens regulares através de autômatos finitos.  
-A descrição do problema pode ser encontrado no PDF "TP1-descrição.pdf" na raíz do diretório.
+**A descrição do problema pode ser encontrado no PDF "TP1-descrição.pdf"** na raíz do diretório.
 
 # Execução
 Executar na raíz do diretório:
