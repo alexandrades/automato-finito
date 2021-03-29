@@ -15,7 +15,7 @@ typedef struct State{
     transition *transitions;
 } state;
 
-state* init_automaton(char *automaton_name);
+state* init_automaton();
 state* init_states(int automaton_size);
 int get_destiny(char* line);
 transition* init_transition_list();

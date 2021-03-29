@@ -28,12 +28,12 @@ int get_destiny(char* line){
 
 // Lé um arquivo .txt contendo a representação do autômato a ser utilizado para o reconhecimento das palavras
 // automaton_name: vetor de caracteres contendo o nome do arquivo onde se encontra a representaçao do autômato.
-state* init_automaton(char *automaton_name) {
+state* init_automaton() {
     char line[MAX_LINE_SIZE];
     char symbol;
     int index, automaton_size, destiny;
     
-    FILE* arq = fopen(automaton_name, "r");
+    FILE* arq = fopen("automaton.txt", "r");
 
     if (arq == NULL){
         printf("Problema ao ler arquivo.\n");
@@ -41,7 +41,6 @@ state* init_automaton(char *automaton_name) {
     }
 
     fscanf(arq, "%d\n", &automaton_size);
-    printf("%d\n", automaton_size);
     state* states_arr = init_states(automaton_size);
     fscanf(arq, "%d\n", &index);
 
@@ -166,7 +165,6 @@ void read_from_file(state *automaton){
     printf("\n==== RESULTADO ====\n");
     while (!feof(arq2)){
         char line[1000];
-        // fgets(line, 9999, arq2);
         fscanf(arq2, "%s\n", line);
 
         execute_automaton(automaton, 0, line, 0);
